@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Policy Management System</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Healthcare Policy Management System</h1>
+        <p>Please choose your role</p>
+        <form action="/chooseRole" method="POST">
+            <label>
+                <input type="radio" name="role" value="healthcare" required> Healthcare Staff
+            </label>
+            <label>
+                <input type="radio" name="role" value="admin" required> System Administrator
+            </label>
+            <button type="submit" class="btn">Proceed</button>
+        </form>
+    </div>
+</body>
+</html>

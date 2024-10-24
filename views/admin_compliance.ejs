@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Compliance Dashboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Policy ID</th>
+                    <th>Policy Title</th>
+                    <th>Staff ID</th>
+                    <th>Staff Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% acknowledgements.forEach(record => { %>
+                <tr>
+                    <td><%= record.policyId %></td>
+                    <td><%= record.policyTitle %></td>
+                    <td><%= record.staffId %></td>
+                    <td><%= record.staffName %></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Policy</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+        <div class="container">
+        <h1>Create Policy</h1>
+        <div class="policy-rectangle">
+        <div class="plus-button">
+            <button class="plus-btn" onclick="showForm()">+</button>
+        </div>
+        </div>
+        <div class="links">
+            <a href="/admin/compliance" class="link">Compliance Dashboard</a>
+            <a href="/admin/view-policy" class="link">View Policy</a>
+        </div>
+        <form id="policy-form" action="/admin/create-policy" method="POST" enctype="multipart/form-data" style="display: none;">
+            <input type="text" name="title" placeholder="Policy Title" required>
+            <textarea name="description" placeholder="Policy Description" required></textarea>
+            <input type="number" name="version" placeholder="Policy Version" required>
+            <input type="date" name="effectiveDate" placeholder="Effective Date" required>
+            <input type="file" name="file" required>
+            <button type="submit" class="btn">Create Policy</button>
+        </form>
+    </div>
+    <script>
+        function showForm() {
+            document.getElementById('policy-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
+

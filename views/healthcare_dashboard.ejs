@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Staff Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Policy Dashboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Policy Title</th>
+                    <th>Description</th>
+                    <th>Version</th>
+                    <th>Effective Date</th>
+                    <th>Acknowledgement</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% policies.forEach(policy => { %>
+                <tr>
+                    <td>
+                        <%= policy.title %>
+                        <% if (policy.edited) { %><span class="new-label">New</span><% } %>
+                    </td>
+                    <td>
+                        <a href="/download/<%= policy.file %>">Download</a>
+                    </td>
+                    <td><%= policy.version %></td>
+                    <td><%= policy.effectiveDate %></td>
+                    <td>
+                        <% if (!policy.acknowledgedBy.includes(user._id)) { %>
+                        <form action="/healthcare/acknowledge/<%= policy._id %>" method="POST">
+                            <input type="hidden" name="userId" value="<%= user._id %>"> <!-- Include the user ID -->
+                            <button type="submit" class="btn">Acknowledge</button>
+                        </form>
+                        <% } else { %>
+                        Acknowledged
+                        <% } %>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

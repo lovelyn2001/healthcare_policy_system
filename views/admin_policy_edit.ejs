@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Policy</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Policy</h1>
+        <form action="/admin/edit-policy/<%= policy._id %>" method="POST">
+            <input type="text" name="title" value="<%= policy.title %>" required>
+            <textarea name="description" required><%= policy.description %></textarea>
+            <input type="number" name="version" value="<%= policy.version %>" required>
+            <input type="date" name="effectiveDate" value="<%= policy.effectiveDate.toISOString().split('T')[0] %>" required>
+            <button type="submit" class="btn">Update Policy</button>
+        </form>
+        <a href="/admin/view-policy">Back to Policies</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient for aesthetics */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 400px; /* Set a max height to enable scrolling if content exceeds this height */
+    border: 1px solid #ddd; /* Optional: adds a border to the container */
+    padding: 10px; /* Optional: adds some padding */
+    margin-top: 20px; /* Optional: adds some space above the table */
+}
+
+h1, h2 {
+    color: #333;
+}
+
+input, textarea, select, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    display: inline-block;
+    width: auto;
+}
+
+.btn {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #feb47b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #ff7e5f;
+    color: white;
+}
+
+td {
+    color: #333; /* Dark color for visibility */
+}
+
+tr:nth-child(even) td {
+    background-color: #f9f9f9; /* Light background for even rows */
+}
+
+
+.new-label {
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    padding: 2px 5px;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.plus-btn {
+    background-color: #ff7e5f;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.container {
+    text-align: center; /* Center the text */
+}
+
+.policy-rectangle {
+    width: 400px; /* Width of the rectangle */
+    height: 300px; /* Height of the rectangle */
+    background-color: linear-gradient(to right, #ff7e5f, #feb47b) !important; /* Background color of the rectangle */
+    border: 1px solid #ddd; /* Border of the rectangle */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+    position: relative; /* For positioning the plus button */
+    margin: 0 auto; /* Center the rectangle */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.plus-button {
+    width: 60px; /* Width of the plus button */
+    height: 60px; /* Height of the plus button */
+    background-color: #007bff; /* Background color of the button */
+    color: white; /* Text color */
+    font-size: 30px; /* Font size */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+    text-decoration: none; /* Remove underline */
+    position: absolute; /* Position the button absolutely */
+}
+
+.links {
+    margin-top: 20px; /* Space between rectangle and links */
+}
+
+.link {
+    display: inline-block; /* Make links inline */
+    margin: 0 15px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Link color */
+    font-size: 16px; /* Font size */
+}
+
+
+/* Message styles */
+.message {
+    color: red; /* Red color for error messages */
+    margin-bottom: 10px; /* Spacing below the message */
+    text-align: center; /* Center the message */
+}
+
+/* Add this to your styles.css */
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    max-height: 400px; /* Set a max height to enable scrolling if content exceeds this height */
+    border: 1px solid #ddd; /* Optional: adds a border to the container */
+    padding: 10px; /* Optional: adds some padding */
+    margin-top: 20px; /* Optional: adds some space above the table */
+}
+
+
+/* Responsive Styles */
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px; /* Reduced padding for smaller screens */
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Slightly smaller font size */
+    }
+
+    input, textarea, select, button {
+        padding: 8px; /* Smaller padding */
+    }
+
+    .btn {
+        padding: 8px; /* Smaller button padding */
+        font-size: 14px; /* Smaller button font size */
+    }
+
+    .policy-rectangle {
+        width: 90%; /* Make the rectangle responsive */
+        height: auto; /* Auto height */
+    }
+
+    .plus-button {
+        width: 50px; /* Smaller plus button */
+        height: 50px; /* Smaller plus button */
+        font-size: 24px; /* Smaller font size */
+    }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .container {
+        padding: 18px; /* Medium padding */
+    }
+
+    h1, h2 {
+        font-size: 1.75em; /* Adjusted font size for medium screens */
+    }
+
+    input, textarea, select, button {
+        padding: 9px; /* Medium padding */
+    }
+
+    .btn {
+        padding: 9px; /* Medium button padding */
+        font-size: 15px; /* Medium button font size */
+    }
+
+    .policy-rectangle {
+        width: 80%; /* Wider rectangle for medium screens */
+        height: auto; /* Auto height */
+    }
+
+    .plus-button {
+        width: 55px; /* Medium plus button */
+        height: 55px; /* Medium plus button */
+        font-size: 26px; /* Medium font size */
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 769px) {
+    .container {
+        padding: 20px; /* Default padding */
+    }
+
+    h1, h2 {
+        font-size: 2em; /* Default font size */
+    }
+
+    input, textarea, select, button {
+        padding: 10px; /* Default padding */
+    }
+
+    .btn {
+        padding: 10px; /* Default button padding */
+        font-size: 16px; /* Default button font size */
+    }
+
+    .policy-rectangle {
+        width: 400px; /* Default width */
+        height: 300px; /* Default height */
+    }
+
+    .plus-button {
+        width: 60px; /* Default plus button */
+        height: 60px; /* Default plus button */
+        font-size: 30px; /* Default font size */
+    }
+}

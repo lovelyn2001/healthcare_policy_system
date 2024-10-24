@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View/Edit Policies</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Manage Policies</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Policy Title</th>
+                    <th>Description</th>
+                    <th>Version</th>
+                    <th>Effective Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% policies.forEach(policy => { %>
+                <tr>
+                    <td><%= policy.title %></td>
+                    <td><%= policy.description %></td>
+                    <td><%= policy.version %></td>
+                    <td><%= policy.effectiveDate %></td>
+                    <td>
+                        <button class="btn" onclick="editPolicy('<%= policy._id %>')">Edit</button>
+                        <button class="btn" onclick="deletePolicy('<%= policy._id %>')">Delete</button>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
